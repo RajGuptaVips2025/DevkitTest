@@ -127,7 +127,6 @@ export default function Builder() {
         files, // current files state (initially probably empty)
         email: session?.user?.email, // manually pass email
       });
-
       const generationId = saveResponse.data.generation._id;
       localStorage.setItem(`ai-generation-id-${prompt}`, generationId);
       // console.log(saveResponse.data.generation)
@@ -401,6 +400,8 @@ export default function Builder() {
 
     // 4. Update backend with full file tree, including all file properties
     const generationId = localStorage.getItem(`ai-generation-id-${prompt}`);
+console.log(generationId)
+
     if (!generationId) return;
 
     try {
