@@ -22,13 +22,3 @@ export default function NewProjectPage() {
     </div>
   )
 }
-
-
-
-
-
-
-
-
-
-

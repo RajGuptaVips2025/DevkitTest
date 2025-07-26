@@ -40,7 +40,6 @@ export async function GET(
     if (!generation) {
       return NextResponse.json({ error: "Generation not found" }, { status: 404 });
     }
-
     return NextResponse.json({ success: true, generation }, { status: 200 });
   } catch (error) {
     console.error("❌ Error fetching generation:", error);

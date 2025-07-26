@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
       output,
       files,
     });
-
+    console.log(newGeneration);
     return NextResponse.json({ success: true, generation: newGeneration });
   } catch (error) {
     console.error("❌ Error saving generation:", error);
